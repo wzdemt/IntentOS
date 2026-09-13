@@ -144,6 +144,25 @@ python adapters/cli.py journal [--limit N]        # 调用日志：刚才做过�
 
 > 契约：**无状态**。它不持有你的 session、凭据、状态 —— 需要的上下文当纯数据传进来。
 
+### 给 Agent 一份说明书
+
+上面那节是自己写代码接；如果你只是想让**手边的 Agent**（Claude Code、Cursor 之类）会用这套能力，
+`docs/agent-guide.md` 就是给它准备的 —— 一份告诉它「有哪些能力、怎么调、什么时候该用」的说明书。
+
+Claude Code 用户在仓库根跑一次，之后在任何项目里都能用：
+
+```bash
+# Windows（Git Bash）—— 用 $(pwd -W) 取 Windows 风格路径：$PWD 是 /d/... 形式，Python 认不得
+mkdir -p ~/.claude/skills/intentos
+sed "s|<INTENTOS>|$(pwd -W)|g" docs/agent-guide.md > ~/.claude/skills/intentos/SKILL.md
+
+# macOS / Linux
+mkdir -p ~/.claude/skills/intentos
+sed "s|<INTENTOS>|$PWD|g" docs/agent-guide.md > ~/.claude/skills/intentos/SKILL.md
+```
+
+其他 Agent：把那份文件交给它读即可。
+
 ### 工具分块（省 token）
 
 98 条原语的完整说明书约 **33K tokens**，全量注入是每轮对话的固定开销。
@@ -232,6 +251,7 @@ intentos/
 | `docs/os-primitives.md` | ★ **原语手册** —— 现役原语、怎么调、安全约定。**唯一需要人维护的** |
 | `docs/os-progress.md` | **能力全貌** —— 98 条能力按域分组的清单（脚本生成，手改会被覆盖）|
 | `docs/design-notes.md` | **设计札记** —— 为什么边界划这么紧、为什么不做成 MCP、试过什么又撤了 |
+| `docs/agent-guide.md` | **给 Agent 的说明书** —— 交给你的 Agent，它就知道怎么调（Claude Code 用户装一次即可）|
 | `CONTRIBUTING.md` | **贡献指南** —— 目录规范、加原语的步骤、命名规范、安全分级 |
 | `docs/archive/` | **历史区** —— 完成使命的文档（实现新原语时来翻能力地图） |
 
