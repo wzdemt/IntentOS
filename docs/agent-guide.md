@@ -9,21 +9,22 @@ description: 用 IntentOS 做**系统层**操作 —— 进程、服务、端口
 
 ## 装到你的 Agent 上
 
-**Claude Code** —— 在 IntentOS 仓库根目录执行一次（装到用户级，之后在任何项目里都能用）：
+**把这份文件交给它就行** —— 怎么交，看你的 Agent：
 
-```bash
-# Windows（Git Bash）—— 用 $(pwd -W) 取 Windows 风格路径：$PWD 是 /d/... 形式，Python 认不得
-mkdir -p ~/.claude/skills/intentos
-sed "s|<INTENTOS>|$(pwd -W)|g" docs/agent-guide.md > ~/.claude/skills/intentos/SKILL.md
+- **最省事**：让它读这个文件，或把内容贴进它的上下文
+- **一劳永逸**：装进它的「规则 / skill 目录」，以后自动就认得。以 Claude Code 为例，在 IntentOS 仓库根跑一次，之后在任何项目里都能用：
 
-# macOS / Linux
-mkdir -p ~/.claude/skills/intentos
-sed "s|<INTENTOS>|$PWD|g" docs/agent-guide.md > ~/.claude/skills/intentos/SKILL.md
-```
+  ```bash
+  # Windows（Git Bash）—— 用 $(pwd -W) 取 Windows 风格路径：$PWD 是 /d/... 形式，Python 认不得
+  mkdir -p ~/.claude/skills/intentos
+  sed "s|<INTENTOS>|$(pwd -W)|g" docs/agent-guide.md > ~/.claude/skills/intentos/SKILL.md
 
-**其他 Agent** —— 把这份文件交给它读，或让它自己读这个文件。
+  # macOS / Linux
+  mkdir -p ~/.claude/skills/intentos
+  sed "s|<INTENTOS>|$PWD|g" docs/agent-guide.md > ~/.claude/skills/intentos/SKILL.md
+  ```
 
-> 文中 `<INTENTOS>` 指 IntentOS 仓库的绝对路径。开头那两行 `name` / `description` 是 Claude Code 用来判断「什么时候该用」的触发信息，其他 Agent 可以忽略，也可以照抄进自己的工具描述里。
+> 文中 `<INTENTOS>` 指 IntentOS 仓库的绝对路径。开头那两行 `name` / `description` 是装进 skill 目录时，给 Agent 判断「什么时候该用它」的触发信息 —— 直接读的话可以忽略。
 
 ---
 

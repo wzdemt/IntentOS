@@ -146,10 +146,11 @@ python adapters/cli.py journal [--limit N]        # 调用日志：刚才做过�
 
 ### 给 Agent 一份说明书
 
-上面那节是自己写代码接；如果你只是想让**手边的 Agent**（Claude Code、Cursor 之类）会用这套能力，
+上面那节是自己写代码接；如果你只是想让**手边的 Agent**会用这套能力，
 `docs/agent-guide.md` 就是给它准备的 —— 一份告诉它「有哪些能力、怎么调、什么时候该用」的说明书。
 
-Claude Code 用户在仓库根跑一次，之后在任何项目里都能用：
+**把那份文件交给它就行。** 如果你的 Agent 有「规则 / skill 目录」，装进去会更省事 ——
+以 Claude Code 为例，在仓库根跑一次，之后在任何项目里都能用：
 
 ```bash
 # Windows（Git Bash）—— 用 $(pwd -W) 取 Windows 风格路径：$PWD 是 /d/... 形式，Python 认不得
@@ -160,8 +161,6 @@ sed "s|<INTENTOS>|$(pwd -W)|g" docs/agent-guide.md > ~/.claude/skills/intentos/S
 mkdir -p ~/.claude/skills/intentos
 sed "s|<INTENTOS>|$PWD|g" docs/agent-guide.md > ~/.claude/skills/intentos/SKILL.md
 ```
-
-其他 Agent：把那份文件交给它读即可。
 
 ### 工具分块（省 token）
 
