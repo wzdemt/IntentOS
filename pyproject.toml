@@ -1,0 +1,16 @@
+# IntentOS —— 项目元数据与依赖声明。
+#
+# 说明：本项目当前**不是可安装的 Python 包** —— 源码即运行（见 README「怎么跑」）。
+# 这份 pyproject.toml 用于声明元数据与依赖，供 uv / pip / 依赖扫描工具读取。
+[project]
+name = "intentos"
+version = "0.1.0"
+description = "AI 意图的语义执行层 —— 给 Agent 的 IR 指令集 + 解释器 + 安全网关"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    # 只有 Windows 平台需要：剪贴板 / COM 相关的少数原语用到。
+    # 不装也不影响其余原语。
+    "pywin32; sys_platform == 'win32'",
+]

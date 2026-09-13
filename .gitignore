@@ -1,0 +1,13 @@
+__pycache__/
+agent_workspace/
+*.pyc
+
+# 凭据（别把密钥提交进来）
+.env
+*.key
+
+# 临时文件
+*.tmp
+
+# 运行时产物：调用日志（看「刚才做过什么」，见 core/journal.py）
+logs/

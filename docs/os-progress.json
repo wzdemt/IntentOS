@@ -1,0 +1,1720 @@
+{
+  "summary": {
+    "planned": 98,
+    "done": 98,
+    "all": 196,
+    "all_raw": 204
+  },
+  "domains": [
+    {
+      "name": "进程与系统资源域",
+      "planned": 36,
+      "done": 36,
+      "groups": [
+        {
+          "name": "A. 进程",
+          "items": [
+            {
+              "id": "process.list",
+              "label": "进程枚举",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "process.info",
+              "label": "看某个程序的底细",
+              "verdict": "primitive",
+              "star": true,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "进程查找",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "进程启动",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "process.kill",
+              "label": "强杀",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "process.set_priority",
+              "label": "调整某个程序抢 CPU 的优先级",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "CPU 亲和性",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "进程挂起/恢复",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "等待进程退出",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "进程树",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "process.stats",
+              "label": "看某个程序吃了多少内存",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "进程 CPU 占用率",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "进程线程列表",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "进程模块(DLL)列表",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "system.free_memory",
+              "label": "清一下内存",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "process.foreground",
+              "label": "看用户此刻正在用哪个程序",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "文件占用者查询",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "单实例/互斥体探测",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "进程环境变量",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "B. 后台服务",
+          "items": [
+            {
+              "id": "service.list",
+              "label": "看电脑里有哪些后台服务在跑",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "service.info",
+              "label": "看某个服务是不是开机自动启动",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "service.control",
+              "label": "启动 / 停止 / 重启某个后台服务",
+              "verdict": "primitive",
+              "star": true,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "服务依赖关系",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "服务失败恢复策略",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "服务创建/删除",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "C. 计划任务",
+          "items": [
+            {
+              "id": "task.list",
+              "label": "看电脑里设了哪些定时任务",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "task.info",
+              "label": "看某个定时任务的详细配置",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "task.create",
+              "label": "新建一个定时任务",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "task.delete",
+              "label": "删掉一个定时任务",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "task.control",
+              "label": "让定时任务马上跑一次",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            }
+          ]
+        },
+        {
+          "name": "D. 电源",
+          "items": [
+            {
+              "id": "power.shutdown",
+              "label": "关机 / 重启 / 注销（最高危）",
+              "verdict": "primitive",
+              "star": true,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "power.lock",
+              "label": "立刻锁屏",
+              "verdict": "primitive",
+              "star": true,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "power.sleep",
+              "label": "休眠",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "关闭显示器",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "防休眠/保持唤醒",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "power.plan",
+              "label": "看/换电源计划",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "power.battery",
+              "label": "看电池电量、是不是插着电",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "睡眠能力探测",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "唤醒定时器/上次唤醒原因",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "唤醒锁占用者",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "E. 事件日志",
+          "items": [
+            {
+              "id": "event.channels",
+              "label": "看系统里都有哪几本「日志本」",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "event.query",
+              "label": "按时间、级别、编号查系统事件日志",
+              "verdict": "primitive",
+              "star": true,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "事件实时订阅",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "event.clear",
+              "label": "清空某本日志（等于抹证据）",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "日志配置/容量",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "写入自定义事件",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "F. 系统信息",
+          "items": [
+            {
+              "id": "system.info",
+              "label": "看这台电脑是什么系统、什么版本",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "system.hardware",
+              "label": "看 CPU 型号、几个核、主频多少",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "内存总量/可用/占用",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "system.uptime",
+              "label": "看这台电脑开机多久了",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "system.load",
+              "label": "看整台电脑此刻 CPU 忙不忙",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "disk.list",
+              "label": "看有几个盘",
+              "verdict": "primitive",
+              "star": true,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "磁盘 IO/健康",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "主板/BIOS/显卡",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "内存条/插槽",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "温度/风扇转速",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "display.info",
+              "label": "看屏幕分辨率",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "网络接口/连接",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "已安装软件清单",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "页面文件配置",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "开关机历史",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "G. 环境变量",
+          "items": [
+            {
+              "id": "env.get",
+              "label": "进程级",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "env.set",
+              "label": "用户级",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "删除环境变量",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "H. 系统配置",
+          "items": [
+            {
+              "id": "registry.read",
+              "label": "读注册表里的配置项",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "registry.write",
+              "label": "写注册表配置项",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "注册表删除",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "startup.list",
+              "label": "一次性看到「这台电脑开机都自动启动…",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "自启动项增删",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "time.zones",
+              "label": "看时区、改时区（改系统时间更敏感）",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "安全中心/Defender 状态",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "显示缩放/DPI 设置",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "区域/语言设置",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "文件与存储域",
+      "planned": 33,
+      "done": 33,
+      "groups": [
+        {
+          "name": "A. 文件内容读写",
+          "items": [
+            {
+              "id": "fs.read",
+              "label": "读文本文件内容",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.write",
+              "label": "写 / 覆盖一个文本文件",
+              "verdict": "primitive",
+              "star": true,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.append",
+              "label": "往文件末尾追加内容（写日志常用）",
+              "verdict": "primitive",
+              "star": true,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.read_bytes",
+              "label": "读二进制文件",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.write_bytes",
+              "label": "写二进制文件",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "fs.patch",
+              "label": "把文件里某段文字替换掉",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "fs.touch",
+              "label": "创建一个空文件 / 只更新文件的时…",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "fs.temp",
+              "label": "建一个临时文件或临时目录",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            }
+          ]
+        },
+        {
+          "name": "B. 文件/目录生命周期",
+          "items": [
+            {
+              "id": "fs.copy",
+              "label": "复制文件或整个目录",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.move",
+              "label": "移动或重命名文件 / 目录",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.delete",
+              "label": "删除文件或目录",
+              "verdict": "primitive",
+              "star": true,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.mkdir",
+              "label": "新建目录（可以一次把父级目录也建好）",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.sync",
+              "label": "目录树镜像 / 增量同步",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "fs.link",
+              "label": "建硬链接 / 软链接",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            }
+          ]
+        },
+        {
+          "name": "C. 元数据与路径",
+          "items": [
+            {
+              "id": "fs.stat",
+              "label": "查文件的大小",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.hash",
+              "label": "算文件的指纹",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.attrs",
+              "label": "看 / 改文件的只读",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.path",
+              "label": "把路径统一整理好",
+              "verdict": "primitive",
+              "star": true,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.owner",
+              "label": "看文件属于哪个用户",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "fs.compressed_size",
+              "label": "看文件实际占了多少磁盘",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "fs.ads",
+              "label": "查文件里藏着的隐藏数据流",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "fs.long_path",
+              "label": "处理超过 260 字符的超长路径",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "D. 目录视图",
+          "items": [
+            {
+              "id": "fs.list",
+              "label": "已有",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.tree",
+              "label": "把整个目录结构画成一棵树返回",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.size",
+              "label": "算一个目录总共占多大",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.stats",
+              "label": "目录统计",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            }
+          ]
+        },
+        {
+          "name": "E. 检索",
+          "items": [
+            {
+              "id": "fs.find",
+              "label": "增强",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.grep",
+              "label": "在文件内容里搜关键词",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "fs.dupes",
+              "label": "找出内容完全相同的重复文件",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "fs.bigfiles",
+              "label": "找出占空间最大的文件（磁盘占用排行）",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "fs.changed_since",
+              "label": "列出最近几小时内改动过的文件",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "F. 磁盘与存储",
+          "items": [
+            {
+              "id": "disk.usage",
+              "label": "看指定路径所在磁盘的容量和剩余",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "disk.health",
+              "label": "看物理硬盘健不健康",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "disk.partition",
+              "label": "看硬盘分区情况",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "disk.reliability",
+              "label": "看硬盘的寿命预测",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "disk.io",
+              "label": "看磁盘读写速度、排队长度、响应时间",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "disk.optimize",
+              "label": "磁盘碎片整理 / TRIM / 重删",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "disk.chkdsk",
+              "label": "检查并修复磁盘错误",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "disk.mount",
+              "label": "改盘符、挂载/卸载",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "disk.quota",
+              "label": "磁盘配额（限制某用户能用多少空间）",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "disk.vss",
+              "label": "卷影副本 / 历史版本恢复",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "G. 压缩与归档",
+          "items": [
+            {
+              "id": "archive.list",
+              "label": "看压缩包里都有哪些文件（不用解压）",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "archive.extract",
+              "label": "解压文件（带路径穿越和压缩炸弹防护）",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "archive.create",
+              "label": "把文件或目录打包成 zip / t…",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "archive.info",
+              "label": "判断这个文件是不是压缩包、是什么格式",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "archive.single",
+              "label": "单文件压缩 / 解压",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "`archive.7z`",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "archive.encrypted",
+              "label": "带密码的压缩包",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "archive.stream",
+              "label": "边压边传的流式压缩（不落盘）",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "H. 权限与属主",
+          "items": [
+            {
+              "id": "acl.get",
+              "label": "看一个文件/目录的权限清单",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "acl.set",
+              "label": "改权限清单",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "acl.owner",
+              "label": "单独改文件的属主",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "fs.chmod",
+              "label": "改 POSIX 权限位",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "I. 注册表（用户配置类）",
+          "items": [
+            {
+              "id": "reg.get",
+              "label": "读注册表里的配置值",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "reg.set",
+              "label": "写 / 新建注册表值",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "reg.list",
+              "label": "列出某个注册表键下面有哪些子键和值",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "reg.delete",
+              "label": "删注册表的键或值",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "reg.assoc",
+              "label": "查文件关联",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "reg.autoruns",
+              "label": "审计自启动项",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "reg.export_import",
+              "label": "导入 / 导出 `.reg` 注册…",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "J. 快捷方式与外壳集成",
+          "items": [
+            {
+              "id": "shell.shortcut_read",
+              "label": "读快捷方式指向哪",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "shell.shortcut_write",
+              "label": "创建 / 修改快捷方式",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "shell.recycle",
+              "label": "回收站",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "shell.open",
+              "label": "用默认程序打开文件或网址",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "shell.reveal",
+              "label": "在资源管理器里定位并选中某个文件",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "shell.clipboard",
+              "label": "读 / 写剪贴板（更适合归到交互域）",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": "shell.filetype",
+              "label": "查文件类型的描述和图标",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "网络与交互域",
+      "planned": 29,
+      "done": 29,
+      "groups": [
+        {
+          "name": "A. 网络",
+          "items": [
+            {
+              "id": "net.interfaces",
+              "label": "看这台电脑有哪些网卡",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "net.ip_config",
+              "label": "看本机的 IP、网关、DNS 服务器",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "net.port_owner",
+              "label": "查是哪个程序占用了某个端口",
+              "verdict": "primitive",
+              "star": true,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "net.connections",
+              "label": "看当前所有网络连接",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "net.routes",
+              "label": "看路由表（去不同网段该走哪个网关）",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "net.dns_resolve",
+              "label": "把域名翻译成 IP 地址",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "net.ping",
+              "label": "测目标通不通、延迟多少、丢包多少",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "net.tcp_check",
+              "label": "测某个端口能不能连上",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "net.io_stats",
+              "label": "看每块网卡收发了多少流量、丢了多少包",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "net.http_get",
+              "label": "发一个 HTTP 请求取回响应",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "net.download",
+              "label": "从网上下载文件到本地",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "net.firewall_status",
+              "label": "看防火墙各个配置档开没开",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "net.firewall_rules",
+              "label": "看防火墙的规则列表",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "net.wifi_status",
+              "label": "看当前连的 WiFi 是哪个",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "监听端口列表",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "路由追踪",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "综合诊断",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "ARP/邻居表",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "公网 IP 查询",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "防火墙开关",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "WiFi 连接",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "代理设置",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "hosts 文件读写",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "抓包",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "B. 界面交互",
+          "items": [
+            {
+              "id": "ui.window_list",
+              "label": "看当前开了哪些窗口",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "ui.window_activate",
+              "label": "把某个窗口调到最前面",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "ui.window_control",
+              "label": "最小化 / 最大化 / 关闭某个窗口",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "ui.screenshot",
+              "label": "截屏存成图片",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "ui.clipboard_get",
+              "label": "读剪贴板里的文字",
+              "verdict": "primitive",
+              "star": true,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "ui.clipboard_set",
+              "label": "把文字写进剪贴板",
+              "verdict": "primitive",
+              "star": true,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "ui.notify",
+              "label": "弹一个系统通知给用户",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "ui.type_text",
+              "label": "往当前焦点窗口里输入一段纯文字",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            }
+          ]
+        },
+        {
+          "name": "C. 显示",
+          "items": [
+            {
+              "id": "display.modes",
+              "label": "看屏幕支持哪些分辨率和刷新率",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "display.monitors",
+              "label": "看接了几块显示器",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "display.brightness",
+              "label": "看屏幕亮度（只对笔记本内置屏有效）",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "当前显示模式",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "区域/窗口截图",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "改分辨率/刷新率",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "亮度设置",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "D. 声音",
+          "items": [
+            {
+              "id": "sound.beep",
+              "label": "响一声提示音 / 播放一段 wav",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "TTS 朗读",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "E. 会话与电源（跨域归属，此处列出交互域视角）",
+          "items": [
+            {
+              "id": "system.idle_time",
+              "label": "看用户多久没动键盘鼠标了",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "`shell.*`（窗口置顶",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        },
+        {
+          "name": "F. 外设",
+          "items": [
+            {
+              "id": "device.usb_list",
+              "label": "看这台电脑插了哪些 USB 设备",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": "device.printers",
+              "label": "看装了哪些打印机",
+              "verdict": "primitive",
+              "star": false,
+              "planned": true,
+              "done": true
+            },
+            {
+              "id": null,
+              "label": "蓝牙设备",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "打印作业",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "剪贴板图片",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "暗色模式/主题",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "鼠标控制",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "音量查询/设置/静音",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "快捷键/组合键",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "UI 自动化（找控件",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "录音",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "媒体控制",
+              "verdict": "exec",
+              "star": false,
+              "planned": false,
+              "done": false
+            },
+            {
+              "id": null,
+              "label": "全局键盘钩子",
+              "verdict": "template",
+              "star": false,
+              "planned": false,
+              "done": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "unmapped": []
+}
